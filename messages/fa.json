@@ -2,7 +2,8 @@
   "HomePage": {
     "title": "{name} عزیز، به صفحه اصلی خوش آمدی!",
     "description": "درباره این صفحه",
-    "urlTitle": "خانه"
+    "urlTitle": "خانه",
+    "carCount": "شما {count, plural, =0 {هیچ ماشینی ندارید} other {# ماشین دارید}}"
   },
   "AboutPage": {
     "title": "درباره ما",
