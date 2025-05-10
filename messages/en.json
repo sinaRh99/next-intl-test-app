@@ -1,6 +1,6 @@
 {
   "HomePage": {
-    "title": "Welcome to the Home Page",
+    "title": "Welcome to the Home Page {name}!",
     "description": "About this page",
     "urlTitle": "Home"
   },
@@ -8,5 +8,12 @@
     "title": "About Us",
     "description": "This is the about page",
     "urlTitle": "About"
+  },
+  "components": {
+    "changeLocale": {
+      "title": "Change locale: ",
+      "en": "English",
+      "fa": "Farsi"
+    }
   }
 }

@@ -12,7 +12,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "HomePage" });
 
   return {
-    title: t("title"),
+    title: t("title", { name: "Sina" }),
   };
 }
 
@@ -30,8 +30,8 @@ export default function Home({
 
   return (
     <div>
-      <h1>{t("title")}</h1>
-      <h3>{t("description")}</h3>
+      <h1 className="font-bold text-xl">{t("title", { name: "Sina" })}</h1>
+      <h3 className="text-gray-600">{t("description")}</h3>
       <Link className="mt-4 text-blue-500 hover:text-blue-600" href="/about">
         {aboutPageT("urlTitle")}
       </Link>

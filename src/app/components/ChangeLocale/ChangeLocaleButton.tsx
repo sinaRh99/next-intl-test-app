@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export const ChangeLocaleButton = ({
   locale,
@@ -10,15 +10,18 @@ export const ChangeLocaleButton = ({
   onClick: (locale: string) => void;
 }) => {
   const currentLocale = useLocale();
-
-  const buttonColor = locale === currentLocale ? "teal" : "blue";
+  const t = useTranslations("components.changeLocale");
 
   return (
     <button
-      className={`px-8 py-2 rounded-xl bg-${buttonColor}-400 hover:bg-${buttonColor}-500 focus:bg-${buttonColor}-600 border-${buttonColor}-600 text-white cursor-pointer border transition duration-150 ease-in-out`}
+      className={`px-8 py-2 rounded-xl ${
+        locale === currentLocale
+          ? "bg-teal-400 hover:bg-teal-500 focus:bg-teal-600 border-teal-600"
+          : "bg-blue-400 hover:bg-blue-500 focus:bg-blue-600 border-blue-600"
+      } text-white cursor-pointer border transition duration-150 ease-in-out`}
       onClick={() => onClick(locale)}
     >
-      {locale}
+      {t(locale)}
     </button>
   );
 };
