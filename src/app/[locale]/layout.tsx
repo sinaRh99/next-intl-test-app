@@ -6,6 +6,7 @@ import "../globals.css";
 import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { ChangeLocale } from "../components";
+import NextTopLoader from "nextjs-toploader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,6 +50,7 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased p-4`}
       >
         <NextIntlClientProvider>
+          <NextTopLoader />
           <ChangeLocale />
           {children}
         </NextIntlClientProvider>

@@ -37,6 +37,11 @@ export default function Home({
         <li>{t("carCount", { count: 1 })}</li>
         <li>{t("carCount", { count: 2 })}</li>
       </ul>
+      <ul className="my-4 border border-orange-400 border-dashed w-fit list-disc list-inside py-2 px-4 rounded-lg font-medium text-lg text-orange-700">
+        <li>{t("personOrder", { order: 0 })}</li>
+        <li>{t("personOrder", { order: 1 })}</li>
+        <li>{t("personOrder", { order: 2 })}</li>
+      </ul>
       <Link className="mt-4 text-blue-500 hover:text-blue-600" href="/about">
         {aboutPageT("urlTitle")}
       </Link>

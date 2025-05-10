@@ -3,7 +3,8 @@
     "title": "Welcome to the Home Page {name}!",
     "description": "About this page",
     "urlTitle": "Home",
-    "carCount": "You have {count, plural, =0 {no cars} one {one car} other {# cars}}"
+    "carCount": "You have {count, plural, =0 {no cars} one {one car} other {# cars}}",
+    "personOrder": "You are {order, selectordinal, one {#st} two {#nd} few {#rd} other {#th}} person in line"
   },
   "AboutPage": {
     "title": "About Us",
