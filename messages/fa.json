@@ -5,7 +5,8 @@
     "urlTitle": "خانه",
     "carCount": "شما {count, plural, =0 {هیچ ماشینی ندارید} other {# ماشین دارید}}",
     "personOrder": " شما نفر{order, selectordinal, other {#ام}}  در صف انتظار هستید",
-    "hasCloth": "او {gender, select, female {یک شومیز صورتی} male {یک پیراهن آبی} other {}} دارد"
+    "hasCloth": "او {gender, select, female {یک شومیز صورتی} male {یک پیراهن آبی} other {}} دارد",
+    "richText": "این متن نمونه ای از <b>پررنگ</b> ، <i>کج</i> و <p>پاراگراف</p> است.<br></br> {emoji}"
   },
   "AboutPage": {
     "title": "درباره ما",
