@@ -6,7 +6,24 @@
     "carCount": "You have {count, plural, =0 {no cars} one {one car} other {# cars}}",
     "personOrder": "You are {order, selectordinal, one {#st} two {#nd} few {#rd} other {#th}} person in line",
     "hasCloth": "{gender, select, female {She has a pink dress} male {He has a blue shirt} other {}}",
-    "richText": "This text is an example of <b>bold</b> , <i>italic</i> and <p>paragraph</p> text.<br></br> {emoji}"
+    "richText": "This text is an example of <b>bold</b> , <i>italic</i> and <p>paragraph</p> text.<br></br> {emoji}",
+    "developers": {
+      "pooria": {
+        "work": "Front-end developer",
+        "name": "Pooria",
+        "age": "25 years old"
+      },
+      "vahid": {
+        "work": "Wordpress developer",
+        "name": "Vahid",
+        "age": "23 years old"
+      },
+      "kaveh": {
+        "work": "Back-end developer",
+        "name": "Kaveh",
+        "age": "44 years old"
+      }
+    }
   },
   "AboutPage": {
     "title": "About Us",

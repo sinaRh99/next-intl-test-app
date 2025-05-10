@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { use } from "react";
-import { useTranslations } from "next-intl";
+import { useMessages, useTranslations } from "next-intl";
 import { RichText } from "../components";
 
 export async function generateMetadata({
@@ -25,6 +25,10 @@ export default function Home({
   const { locale } = use(params);
 
   setRequestLocale(locale);
+
+  const messages = useMessages();
+
+  const keys = Object.keys(messages.HomePage.developers);
 
   const t = useTranslations("HomePage");
   const aboutPageT = useTranslations("AboutPage");
@@ -53,6 +57,18 @@ export default function Home({
             {(tags) => t.rich("richText", { ...tags, emoji: "=D" })}
           </RichText>
         </div>
+        <ul className="border border-blue-400 border-dashed w-fit list-disc list-inside py-2 px-4 rounded-lg font-medium text-lg text-blue-700">
+          {keys.map((key) => (
+            <li key={key} className="mb-4">
+              <span className="text-xl font-normal">
+                {t(`developers.${key}.name`)}: {t(`developers.${key}.age`)}
+              </span>
+              <h3 className="text-2xl font-bold">
+                {t(`developers.${key}.work`)}
+              </h3>
+            </li>
+          ))}
+        </ul>
       </div>
       <Link className="mt-4 text-blue-500 hover:text-blue-600" href="/about">
         {aboutPageT("urlTitle")}

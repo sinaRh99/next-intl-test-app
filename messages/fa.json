@@ -6,7 +6,29 @@
     "carCount": "شما {count, plural, =0 {هیچ ماشینی ندارید} other {# ماشین دارید}}",
     "personOrder": " شما نفر{order, selectordinal, other {#ام}}  در صف انتظار هستید",
     "hasCloth": "او {gender, select, female {یک شومیز صورتی} male {یک پیراهن آبی} other {}} دارد",
-    "richText": "این متن نمونه ای از <b>پررنگ</b> ، <i>کج</i> و <p>پاراگراف</p> است.<br></br> {emoji}"
+    "richText": "این متن نمونه ای از <b>پررنگ</b> ، <i>کج</i> و <p>پاراگراف</p> است.<br></br> {emoji}",
+    "developers": {
+      "pooria": {
+        "work": "توسعه دهنده فرانت اند",
+        "name": "پوریا",
+        "age": "25 ساله"
+      },
+      "vahid": {
+        "work": "توسعه دهنده وردپرس",
+        "name": "وحید",
+        "age": "23 ساله"
+      },
+      "kaveh": {
+        "work": "توسعه دهنده بک اند",
+        "name": "کاوه",
+        "age": "۴۴ ساله"
+      },
+      "sina": {
+        "work": "تیم لید فرانت",
+        "name": "سینا",
+        "age": "۲۵ ساله"
+      }
+    }
   },
   "AboutPage": {
     "title": "درباره ما",
