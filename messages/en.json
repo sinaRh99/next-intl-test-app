@@ -4,7 +4,8 @@
     "description": "About this page",
     "urlTitle": "Home",
     "carCount": "You have {count, plural, =0 {no cars} one {one car} other {# cars}}",
-    "personOrder": "You are {order, selectordinal, one {#st} two {#nd} few {#rd} other {#th}} person in line"
+    "personOrder": "You are {order, selectordinal, one {#st} two {#nd} few {#rd} other {#th}} person in line",
+    "hasCloth": "{gender, select, female {She has a pink dress} male {He has a blue shirt} other {}}"
   },
   "AboutPage": {
     "title": "About Us",

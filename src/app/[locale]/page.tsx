@@ -42,6 +42,10 @@ export default function Home({
         <li>{t("personOrder", { order: 1 })}</li>
         <li>{t("personOrder", { order: 2 })}</li>
       </ul>
+      <ul className="my-4 border border-fuchsia-400 border-dashed w-fit list-disc list-inside py-2 px-4 rounded-lg font-medium text-lg text-fuchsia-700">
+        <li>{t("hasCloth", { gender: "male" })}</li>
+        <li>{t("hasCloth", { gender: "female" })}</li>
+      </ul>
       <Link className="mt-4 text-blue-500 hover:text-blue-600" href="/about">
         {aboutPageT("urlTitle")}
       </Link>

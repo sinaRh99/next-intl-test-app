@@ -4,7 +4,8 @@
     "description": "درباره این صفحه",
     "urlTitle": "خانه",
     "carCount": "شما {count, plural, =0 {هیچ ماشینی ندارید} other {# ماشین دارید}}",
-    "personOrder": " شما نفر{order, selectordinal, other {#ام}}  در صف انتظار هستید"
+    "personOrder": " شما نفر{order, selectordinal, other {#ام}}  در صف انتظار هستید",
+    "hasCloth": "او {gender, select, female {یک شومیز صورتی} male {یک پیراهن آبی} other {}} دارد"
   },
   "AboutPage": {
     "title": "درباره ما",
