@@ -4,6 +4,15 @@ import { use } from "react";
 import { useMessages, useTranslations } from "next-intl";
 import { RichText } from "../components";
 
+const currencyFormat = {
+  number: {
+    currency: {
+      style: "currency",
+      currency: "IRR",
+    },
+  },
+} as const;
+
 export async function generateMetadata({
   params,
 }: {
@@ -68,6 +77,34 @@ export default function Home({
               </h3>
             </li>
           ))}
+        </ul>
+        <ul className="border border-stone-400 border-dashed w-fit list-disc list-inside py-2 px-4 rounded-lg font-medium text-lg text-stone-700">
+          <li>{t("numbersTest.basic", { value: 24 })}</li>
+          <li>{t("numbersTest.basic", { value: 24.6 })}</li>
+          <li>{t("numbersTest.basic", { value: 24.585542 })}</li>
+          <li>{t("numbersTest.basic", { value: 100320000558998.21425 })}</li>
+          <li>{t("numbersTest.percentage", { value: 24 })}</li>
+          <li>{t("numbersTest.percentage", { value: 24.6 })}</li>
+          <li>{t("numbersTest.percentage", { value: 24.585542 })}</li>
+          <li>
+            {t("numbersTest.percentage", { value: 100320000558998.21425 })}
+          </li>
+          <li>{t("numbersTest.2digits", { value: 24 })}</li>
+          <li>{t("numbersTest.2digits", { value: 24.6 })}</li>
+          <li>{t("numbersTest.2digits", { value: 24.585542 })}</li>
+          <li>{t("numbersTest.2digits", { value: 100320000558998.21425 })}</li>
+          <li>{t("numbersTest.currency", { value: 24 }, currencyFormat)}</li>
+          <li>{t("numbersTest.currency", { value: 24.6 }, currencyFormat)}</li>
+          <li>
+            {t("numbersTest.currency", { value: 24.585542 }, currencyFormat)}
+          </li>
+          <li>
+            {t(
+              "numbersTest.currency",
+              { value: 100320000558998.21425 },
+              currencyFormat
+            )}
+          </li>
         </ul>
       </div>
       <Link className="mt-4 text-blue-500 hover:text-blue-600" href="/about">

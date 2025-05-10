@@ -28,6 +28,12 @@
         "name": "سینا",
         "age": "۲۵ ساله"
       }
+    },
+    "numbersTest": {
+      "basic": "فرمت بندی پایه: {value, number}",
+      "percentage": "به صورت درصد نمایش داده می شود: {value, number, percent}",
+      "2digits": "حداکثر 2 رقم اعشار: {value, number, ::.##}",
+      "currency": "فرمت بندی ارز: {value, number, currency}"
     }
   },
   "AboutPage": {

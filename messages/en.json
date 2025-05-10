@@ -23,6 +23,12 @@
         "name": "Kaveh",
         "age": "44 years old"
       }
+    },
+    "numbersTest": {
+      "basic": "Basic formatting: {value, number}",
+      "percentage": "Displayed as a percentage: {value, number, percent}",
+      "2digits": "At must 2 fraction digits: {value, number, ::.##}",
+      "currency": "Currency formatting: {value, number, currency}"
     }
   },
   "AboutPage": {
