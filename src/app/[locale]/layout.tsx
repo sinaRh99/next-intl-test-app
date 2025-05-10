@@ -5,6 +5,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
+import { ChangeLocale } from "../components";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,11 +44,14 @@ export default async function RootLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={locale === "fa" ? "rtl" : "ltr"}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased p-4`}
       >
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <ChangeLocale />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

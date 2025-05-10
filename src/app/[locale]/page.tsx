@@ -26,12 +26,14 @@ export default function Home({
   setRequestLocale(locale);
 
   const t = useTranslations("HomePage");
+  const aboutPageT = useTranslations("AboutPage");
+
   return (
     <div>
       <h1>{t("title")}</h1>
       <h3>{t("description")}</h3>
-      <Link href="/about" locale="en" style={{ color: "blue" }}>
-        About us
+      <Link className="mt-4 text-blue-500 hover:text-blue-600" href="/about">
+        {aboutPageT("urlTitle")}
       </Link>
     </div>
   );

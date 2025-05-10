@@ -1,10 +1,12 @@
 {
   "HomePage": {
     "title": "Welcome to the Home Page",
-    "description": "About this page"
+    "description": "About this page",
+    "urlTitle": "Home"
   },
   "AboutPage": {
     "title": "About Us",
-    "description": "This is the about page"
+    "description": "This is the about page",
+    "urlTitle": "About"
   }
 }

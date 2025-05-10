@@ -1,10 +1,12 @@
 {
   "HomePage": {
     "title": "به صفحه اصلی خوش آمدید",
-    "description": "درباره این صفحه"
+    "description": "درباره این صفحه",
+    "urlTitle": "خانه"
   },
   "AboutPage": {
     "title": "درباره ما",
-    "description": "این صفحه درباره ما است"
+    "description": "این صفحه درباره ما است",
+    "urlTitle": "درباره"
   }
 }
