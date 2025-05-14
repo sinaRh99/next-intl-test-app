@@ -34,6 +34,16 @@
       "percentage": "به صورت درصد نمایش داده می شود: {value, number, percent}",
       "2digits": "حداکثر 2 رقم اعشار: {value, number, ::.##}",
       "currency": "فرمت بندی ارز: {value, number, currency}"
+    },
+    "dateTest": {
+      "basic": "فرمت بندی تاریخ: {value, date}",
+      "short": "فرمت کوتاه: {value, date, ::yyyy/MM/dd}",
+      "long": "فرمت بلند: {value, date, ::yyyy/MM/dd HH:mm:ss}",
+      "timeZone": "فرمت با منطقه زمانی: {value, date, ::yyyy/MM/dd HH:mm:ss z}",
+      "shortSupported": "فرمت کوتاه پشتیبانی شده: {value,date, short}",
+      "longSupported": "فرمت بلند پشتیبانی شده: {value,date, long}",
+      "fullSupported": "فرمت کامل پشتیبانی شده: {value,date, full}",
+      "mediumSupported": "فرمت متوسط پشتیبانی شده: {value,date, medium}"
     }
   },
   "AboutPage": {

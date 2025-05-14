@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { use } from "react";
-import { useMessages, useTranslations } from "next-intl";
+import { useFormatter, useMessages, useNow, useTranslations } from "next-intl";
 import { RichText } from "../components";
 
 const currencyFormat = {
@@ -9,6 +9,7 @@ const currencyFormat = {
     currency: {
       style: "currency",
       currency: "IRR",
+      currencyDisplay: "narrowSymbol",
     },
   },
 } as const;
@@ -38,15 +39,43 @@ export default function Home({
   const messages = useMessages();
 
   const keys = Object.keys(messages.HomePage.developers);
+  const dateTestKeys = Object.keys(messages.HomePage.dateTest);
+  console.log("🚀 ~ dateTestKeys:", dateTestKeys);
 
   const t = useTranslations("HomePage");
   const aboutPageT = useTranslations("AboutPage");
+
+  const format = useFormatter();
+  const dateTime = new Date("2023-10-01T00:00:00Z");
+  const now = useNow();
+
+  const date = format.dateTime(dateTime, {
+    calendar: "persian",
+    numberingSystem: "arabext",
+
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+
+  const time = format.dateTime(dateTime, {
+    hour: "numeric",
+    minute: "numeric",
+  });
+
+  const relativeTime = format.dateTimeRange(dateTime, now, {
+    year: "2-digit",
+    month: "short",
+    day: "2-digit",
+  });
+
+  const items = ["HTML", "CSS", "JavaScript"];
 
   return (
     <div>
       <h1 className="font-bold text-xl">{t("title", { name: "Sina" })}</h1>
       <h3 className="text-gray-600">{t("description")}</h3>
-      <div className="flex wrap gap-4 my-4">
+      <div className="flex flex-wrap gap-4 my-4">
         <ul className="border border-sky-400 border-dashed w-fit list-disc list-inside py-2 px-4 rounded-lg font-medium text-lg text-sky-700">
           <li>{t("carCount", { count: 0 })}</li>
           <li>{t("carCount", { count: 1 })}</li>
@@ -104,6 +133,80 @@ export default function Home({
               { value: 100320000558998.21425 },
               currencyFormat
             )}
+          </li>
+        </ul>
+        <ul className="border border-red-400 text-red-700 border-dashed w-fit list-disc list-inside py-2 px-4 rounded-lg font-medium text-lg">
+          <li>
+            {date} {time}
+          </li>
+          <li>{relativeTime}</li>
+          {dateTestKeys.map((key) => (
+            <li key={key}>{t(`dateTest.${key}`, { value: now })}</li>
+          ))}
+        </ul>
+        <ul className="border border-neutral-400 text-neutral-700 border-dashed w-fit list-disc list-inside py-2 px-4 rounded-lg font-medium text-lg">
+          <li>
+            conjunction long:{" "}
+            {format.list(items, {
+              type: "conjunction",
+              style: "long",
+            })}
+          </li>
+          <li>
+            conjunction short:{" "}
+            {format.list(items, {
+              type: "conjunction",
+              style: "short",
+            })}
+          </li>
+          <li>
+            conjunction narrow:{" "}
+            {format.list(items, {
+              type: "conjunction",
+              style: "narrow",
+            })}
+          </li>
+          <li>
+            disjunction log:{" "}
+            {format.list(items, {
+              type: "disjunction",
+              style: "long",
+            })}
+          </li>
+          <li>
+            disjunction short:{" "}
+            {format.list(items, {
+              type: "disjunction",
+              style: "short",
+            })}
+          </li>
+          <li>
+            disjunction narrow:{" "}
+            {format.list(items, {
+              type: "disjunction",
+              style: "narrow",
+            })}
+          </li>
+          <li>
+            unit long:{" "}
+            {format.list(items, {
+              type: "unit",
+              style: "long",
+            })}
+          </li>
+          <li>
+            unit short:{" "}
+            {format.list(items, {
+              type: "unit",
+              style: "short",
+            })}
+          </li>
+          <li>
+            unit narrow:{" "}
+            {format.list(items, {
+              type: "unit",
+              style: "narrow",
+            })}
           </li>
         </ul>
       </div>

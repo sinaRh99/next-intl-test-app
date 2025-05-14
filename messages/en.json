@@ -29,6 +29,16 @@
       "percentage": "Displayed as a percentage: {value, number, percent}",
       "2digits": "At must 2 fraction digits: {value, number, ::.##}",
       "currency": "Currency formatting: {value, number, currency}"
+    },
+    "dateTest": {
+      "basic": "Date formatting: {value, date}",
+      "short": "Short format: {value, date, ::yyyyMMdd}",
+      "long": "Long format: {value, date, ::yyyyMMdd HH:mm:ss}",
+      "timeZone": "Format with time zone: {value, date, ::yyyy/MM/dd HH:mm:ss z}",
+      "shortSupported": "Short supported format: {value,date, short}",
+      "longSupported": "Long supported format: {value,date, long}",
+      "fullSupported": "Full supported format: {value,date, full}",
+      "mediumSupported": "Medium supported format: {value,date, medium}"
     }
   },
   "AboutPage": {
